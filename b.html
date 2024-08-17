@@ -1,0 +1,141 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(128, 128, 128);
+            font-weight: 600;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .rect {
+            position: absolute;
+            width: calc(100% - 20px);
+            height: 50px;
+            background-color: rgba(0, 0, 255, 0.1);
+            left: 10px;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .rect:nth-child(2) {
+            top: 70px;
+        }
+
+        .rect:nth-child(3) {
+            top: 130px;
+        }
+
+        .rect:nth-child(4) {
+            top: 190px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.884);
+            border-width: 1px;
+            transition: all 0.2s ease;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* سایه سیاه‌تر */
+            transform: translateY(-4px);
+        }
+
+        input:focus {
+            
+            transform: translateY(-6px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.950); /* سایه سیاه‌تر */
+        }
+        input:hover {
+            
+            transform: translateY(-6px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.950); /* سایه سیاه‌تر */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.950); /* سایه سیاه‌تر */
+            transform: translateY(-4px);
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-6px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.950); /* سایه سیاه‌تر */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ثبت نام</h2>
+        <form action="a.php" method="post">
+            <div class="form-group">
+                <input placeholder="نام کاربری" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <input placeholder="ایمیل">
+            </div>
+            <div class="form-group">
+                <input placeholder="رمز عبور" type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">ورود</button>
+        </form>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+    </div>
+</body>
+</html>
